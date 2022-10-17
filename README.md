@@ -12,7 +12,7 @@ To create Python env:
 python -m venv venv
 ```
 
-- Run the venv
+- Run the venv:
 ```
 source venv/bin/activate for Linux
 venv/Scripts/activate.bat for Windows
