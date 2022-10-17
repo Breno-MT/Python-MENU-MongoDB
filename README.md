@@ -27,12 +27,13 @@ python pymongo_index.py
 python app.py
 ```
 ### Running the first command does the following:
-#### It creates a index on MongoDB to reduces the files it has to look for when used certain types of query!
-#### Which in this case is "name" and "code"
+It creates a index on MongoDB to reduces the files it has to look for when used certain types of query!
+<br>
+Which in this case is "name" and "code".
 
 # About
 - It's a project based on my previous one. <a href="https://github.com/Breno-MT/Python-MongoDB">Click Here</a> to learn more about it.
 - Note: README is in Portuguese-Brazilian!!!
-- The reason that I made this project was, I didn't feel comfortable enough to use only the terminal to make CRUD with MongoDB so, I created a script for that lol
+- The reason that I made this project was, I didn't feel comfortable enough to use only the terminal to make CRUD with MongoDB so, I created a script for that lol.
 
 <img height=383 width=803 src="pymongo_image.png">
