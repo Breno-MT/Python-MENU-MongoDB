@@ -8,6 +8,9 @@ def query_all():
     query_all = collection_name.find()
     query_df = DataFrame(query_all)
 
+    if len(query_df) == 0:
+        print("There's no User in Database, try to create one! :D")
+
     print(f"""User(s): \n {query_df}""")
 
 
@@ -22,7 +25,7 @@ def query_by_name(name):
     if len(query_df) > 0:
         print(f"""User(s) found: \n {query_df}""")
     
-    if len(query_df) <= 0:
+    if len(query_df) == 0:
         print("No Users found! :(")
         print("If you didn't found your user, don't worry, try again.")
 
