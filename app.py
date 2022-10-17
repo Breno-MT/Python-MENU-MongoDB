@@ -1,8 +1,8 @@
 from time import sleep
-from pandas import DataFrame
 from modules.pymongo_database import get_database
 from modules.pymongo_create_user import create_user
 from modules.pymongo_query import query_by_name, query_all
+from modules.pymongo_delete import delete_all_data_in_collection, delete_user_by_id
 
 dbname = get_database()
 
@@ -38,6 +38,7 @@ while True:
     [3] Query by Name
     [4] Update User by _id
     [5] Delete User by _id
+    [6] Delete All Data in Collection
     [0] Exit
     -> """)                                                                                              
 
@@ -59,7 +60,11 @@ while True:
         print("To be created.")
 
     if choice == "5":
-        print("To be created.")
+        id_to_be_deleted = str(input("Type the ID: "))
+        delete_user_by_id(id_to_be_deleted)
+
+    if choice == "6":
+        delete_all_data_in_collection()
 
     if choice == "0":
         break                                                                                      
