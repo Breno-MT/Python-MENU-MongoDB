@@ -29,5 +29,3 @@ def create_user():
     print(query_df)
 
 
-
-
