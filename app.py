@@ -3,6 +3,7 @@ from modules.pymongo_database import get_database
 from modules.pymongo_create_user import create_user
 from modules.pymongo_query import query_by_name, query_all
 from modules.pymongo_delete import delete_all_data_in_collection, delete_user_by_id
+from modules.pymongo_update import update_one_user
 
 dbname = get_database()
 
@@ -57,7 +58,10 @@ while True:
         sleep(1)
 
     if choice == "4":
-        print("To be created.")
+        id_to_be_updated = str(input("Type the ID: "))
+        name_to_be_updated = str(input("Type the new name: "))
+        code_to_be_updated = str(input("Type the new code: "))
+        update_one_user(id_to_be_updated, name_to_be_updated, code_to_be_updated)
 
     if choice == "5":
         id_to_be_deleted = str(input("Type the ID: "))
